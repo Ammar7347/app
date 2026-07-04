@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Chess Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-info">
+            <h1>♔ Chess</h1>
+            <div class="player-info">
+                <div class="player white-player active">
+                    <span class="player-icon">♔</span>
+                    <span class="player-name">White</span>
+                </div>
+                <div class="vs">VS</div>
+                <div class="player black-player">
+                    <span class="player-icon">♚</span>
+                    <span class="player-name">Black</span>
+                </div>
+            </div>
+            <div class="game-status">
+                <span id="status-text">White's Turn</span>
+            </div>
+            <div class="controls">
+                <button id="new-game-btn" class="btn btn-primary">New Game</button>
+                <button id="undo-btn" class="btn btn-secondary">Undo</button>
+                <button id="flip-btn" class="btn btn-secondary">Flip Board</button>
+            </div>
+            <div class="move-history">
+                <h3>Move History</h3>
+                <div id="move-list"></div>
+            </div>
+        </div>
+        
+        <div class="board-container">
+            <div class="board-wrapper">
+                <div id="chess-board" class="chess-board"></div>
+                <div class="board-labels files-label"></div>
+                <div class="board-labels ranks-label"></div>
+            </div>
+        </div>
+        
+        <div class="captured-pieces">
+            <div class="captured-white">
+                <h4>Captured by White</h4>
+                <div id="captured-by-white"></div>
+            </div>
+            <div class="captured-black">
+                <h4>Captured by Black</h4>
+                <div id="captured-by-black"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="game-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="modal-title">Game Over</h2>
+            <p id="modal-message"></p>
+            <button id="modal-new-game" class="btn btn-primary">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
